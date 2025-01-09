@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF Combiner</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h2>Combine PDFs into One</h2>
+      <p>Upload your PDF files and merge them into a single document.</p>
+
+      <!-- File Input Section -->
+      <div class="file-input" id="fileInputContainer">
+        <label for="fileInput">
+          <input type="file" id="fileInput" accept=".pdf" multiple />
+          <p id="fileNames">Click to select or drag and drop PDFs here</p>
+        </label>
+      </div>
+
+      <!-- Combine Button -->
+      <button id="combineButton">Combine PDFs</button>
+
+      <!-- Download Link Section -->
+      <div id="downloadLink">
+        <a id="downloadBtn" href="#" target="_blank">Download Combined PDF</a>
+      </div>
+    </div>
+
+    <!-- Pop-up for Success or Error -->
+    <div class="popup" id="progressPopup">
+      <div class="popup-content">
+        <h3>Combining PDFs... Please wait.</h3>
+      </div>
+    </div>
+
+    <!-- PDF-lib Library loading here -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
