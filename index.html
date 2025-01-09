@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF Combiner</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="background-design">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <div class="container">
+      <header>
+        <h1>PDF Combiner</h1>
+        <p>Quickly merge multiple PDF files into one seamless document!</p>
+      </header>
+
+      <!-- File Input Section -->
+      <div class="file-input" id="fileInputContainer">
+        <label for="fileInput">
+          <input type="file" id="fileInput" accept=".pdf" multiple />
+          <div class="file-input-text">
+            <span class="icon">&#128196;</span>
+            <p id="fileNames">Click to select or drag and drop your PDFs</p>
+          </div>
+        </label>
+      </div>
+
+      <!-- Combine Button -->
+      <button id="combineButton">Merge PDFs</button>
+
+      <!-- Download Link Section -->
+      <div id="downloadLink" class="hidden">
+        <a id="downloadBtn" href="#" target="_blank">Download Your Combined PDF</a>
+      </div>
+    </div>
+
+    <!-- Pop-up for Success or Error -->
+    <div class="popup hidden" id="progressPopup">
+      <div class="popup-content">
+        <h3>Processing your PDFs...</h3>
+        <p>Please wait while we combine them.</p>
+      </div>
+    </div>
+
+    <!-- Load "PDF-lib" Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
